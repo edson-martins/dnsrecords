@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <title>GoLang Web Application</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>DNS MX Record Web Application and Service</h1>
+                <p>Web application that displays the IP address and mail hosts associated with a domain name entered.
+                </p>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <form action="/search" method="POST">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="basic-domain">Entry domain name:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">e.g. domain.com</span>
+                                </div>
+                                <input type="text" class="form-control" id="basic-domain"
+                                    aria-describedby="basic-addon3" name="entry-domain" required>
+                                <span class="input-group-btn">
+                                    <input type="submit" class="btn btn-primary pull-right" />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <li class="card">
+            <ul class="list-group">
+                <li class="list-group-item  list-group-item-info">IP address</li>
+                {{range .Ip}}
+                <li class="list-group-item">{{.}}</li>
+                {{end}}
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info">MX host</li>
+                {{range .Mx}}
+                <li class="list-group-item">{{.Host}} {{.Pref}}</li>
+                {{end}}
+            </ul>
+        </li>
+    </div>
+    </div>
+
+    <script src="static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
