@@ -1,5 +1,6 @@
 [![Go](https://github.com/edson-martins/dnsrecords/actions/workflows/go.yml/badge.svg?style=plastic)](https://github.com/edson-martins/dnsrecords/actions/workflows/go.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/edson-martins/dnsrecords?style=plastic)](https://goreportcard.com/report/github.com/edson-martins/dnsrecords)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=edson-martins_dnsrecords&metric=alert_status)](https://sonarcloud.io/dashboard?id=edson-martins_dnsrecords)
 ---
 
 <p align="center">
