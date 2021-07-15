@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,20 +37,22 @@
                 </div>
             </form>
         </div>
-        <li class="card">
-            <ul class="list-group">
-                <li class="list-group-item  list-group-item-info">IP address</li>
-                {{range .Ip}}
-                <li class="list-group-item">{{.}}</li>
-                {{end}}
-            </ul>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info">MX host</li>
-                {{range .Mx}}
-                <li class="list-group-item">{{.Host}} {{.Pref}}</li>
-                {{end}}
-            </ul>
-        </li>
+        <ul>
+            <li class="card">
+                <ul class="list-group">
+                    <li class="list-group-item  list-group-item-info">IP address</li>
+                    {{range .Ip}}
+                    <li class="list-group-item">{{.}}</li>
+                    {{end}}
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">MX host</li>
+                    {{range .Mx}}
+                    <li class="list-group-item">{{.Host}} {{.Pref}}</li>
+                    {{end}}
+                </ul>
+            </li>
+        </ul>
     </div>
     </div>
 
